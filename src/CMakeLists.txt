@@ -1,17 +1,11 @@
-## Core cmake lists
+add_library(cppLibraries)
 
-add_library(cppLibrary_core)
+target_link_libraries(cppLibraries PUBLIC cppLibrary_options)
 
-## gcc options
-target_link_libraries(cppLibrary_core PUBLIC cppLibrary_options)
+target_include_directories(cppLibraries
+  PUBLIC
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+)
 
-## Public includes
-target_include_directories(cppLibrary_core PUBLIC ${PROJECT_SOURCE_DIR}/include)
-
-## src subdirectories 
 add_subdirectory(logger)
-
-## Binary built
-add_executable(main main.cpp)
-target_link_libraries(main PRIVATE cppLibrary_core)
-
