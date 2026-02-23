@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-LOGGER::LOGGER(){};
+LOGGER::LOGGER() = default;
 
 LOGGER::LOGGER(const std::string& filePath) : logFile(filePath){
     logToFile = true;
