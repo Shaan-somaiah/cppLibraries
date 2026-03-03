@@ -1,8 +1,6 @@
-#include <cppLibraries/logger.h>
+#include "cppLibraries/logger.h"
+#include "cppLibraries/data_structures.h"
 
 int main() {
-    cppLibraries::Logger logger("/tmp/logTest");
-    logger.LogError("Error");
-    logger.LogWarning("Warning");
-    logger.LogInfo("Info");
+    DSA();
 }

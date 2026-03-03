@@ -9,3 +9,4 @@ target_include_directories(cppLibraries
 )
 
 add_subdirectory(logger)
+add_subdirectory(data_structures)
